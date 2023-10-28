@@ -28,7 +28,7 @@ https://github.com/zhjohnchan/R2GenCMN/tree/main/pycocoevalcap
 |   |-- preprocess_mask
 |   |-- results
 |   |-- compute_ce.py
-|  	| ...........
+|   |-- ...........
 
 |-- COMG_model_RL
 |   |-- data
@@ -39,7 +39,7 @@ https://github.com/zhjohnchan/R2GenCMN/tree/main/pycocoevalcap
 |   |-- preprocess_mask
 |   |-- results
 |   |-- compute_ce.py
-|  	| ...........
+|   |-- ...........
 ```
 ## Datasets
 
