@@ -18,9 +18,6 @@ python train_rl.py \
     --seed ${seed} \
     --topk 32 \
     --sc_eval_period 3000 \
-    --resume /home/tiancheng/Downloads/2526_WACV_COMG_Supplementary_material/Supplementary_material/COMG_model/results_weoghts/mimic_cxr_best/model_best.pth \
+    --resume ../COMG_model/results/mimic_cxr/model_best.pth \
     --early_stop 50 \
     --log_period 1000
-
-
-#results/mimic_cxr/model_best.pth \

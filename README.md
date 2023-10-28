@@ -22,7 +22,24 @@ https://github.com/zhjohnchan/R2GenCMN/tree/main/pycocoevalcap
 |-- COMG_model
 |   |-- data
 |   |-- pycocoevalcap
-|   |-- .......
+|   |-- logfile_saved
+|   |-- models
+|   |-- modules
+|   |-- preprocess_mask
+|   |-- results
+|   |-- compute_ce.py
+|  	| ...........
+
+|-- COMG_model_RL
+|   |-- data
+|   |-- pycocoevalcap
+|   |-- logfile_saved
+|   |-- models
+|   |-- modules
+|   |-- preprocess_mask
+|   |-- results
+|   |-- compute_ce.py
+|  	| ...........
 ```
 ## Datasets
 

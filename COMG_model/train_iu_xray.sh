@@ -1,4 +1,4 @@
-python ./COMG_model/main_train.py\
+python main_train.py\
     --image_dir data/IU_xray/images \
     --ann_path data/IU_xray/annotation_disease.json \
     --dataset_name iu_xray \

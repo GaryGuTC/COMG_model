@@ -18,4 +18,4 @@ python main_test.py \
     --beam_size 3 \
     --save_dir results/mimic_cxr/ \
     --log_period 1000 \
-    --load /home/tiancheng/Downloads/2526_WACV_COMG_Supplementary_material/Supplementary_material/COMG_model/results_weights/mimic_cxr_best/model_best.pth
+    --load results/mimic_cxr/model_best.pth
