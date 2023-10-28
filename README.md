@@ -54,7 +54,7 @@ Put data into the data file
 |-- data
 |   |-- IU_xray
 |       |-- images
-|       |   |-- .......
+|           |-- .......
 |       |-- annotation.json
 |       |-- annotation_disease.json
 |   |-- mimic_cxr
