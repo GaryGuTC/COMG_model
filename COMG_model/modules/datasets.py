@@ -62,6 +62,7 @@ class BaseDataset_IU_XRay(Dataset):
         self.image_dir = args.image_dir
         self.ann_path = args.ann_path
         self.max_seq_length = args.max_seq_length
+        self.mask_path = "/".join(self.image_dir.split("/")[:-3])
         self.split = split
         self.tokenizer = tokenizer
         self.transform = transform
@@ -83,8 +84,8 @@ class IuxrayMultiImageDataset(BaseDataset_IU_XRay):
         image_path = example['image_path']
         image_1 = Image.open(os.path.join(self.image_dir, image_path[0])).convert('RGB')
         image_2 = Image.open(os.path.join(self.image_dir, image_path[1])).convert('RGB')
-        mask_bone_1, mask_lung_1, mask_heart_1, mask_mediastinum_1 = [load_pickle("./data/IU_xray_segmentation/{}/0_mask/{}_concat.pkl".format(image_id, each)) for each in ["bone", "lung", "heart", "mediastinum"]]
-        mask_bone_2, mask_lung_2, mask_heart_2, mask_mediastinum_2 = [load_pickle("./data/IU_xray_segmentation/{}/1_mask/{}_concat.pkl".format(image_id, each)) for each in ["bone", "lung", "heart", "mediastinum"]]
+        mask_bone_1, mask_lung_1, mask_heart_1, mask_mediastinum_1 = [load_pickle("{}/data/IU_xray_segmentation/{}/0_mask/{}_concat.pkl".format(self.mask_path, image_id, each)) for each in ["bone", "lung", "heart", "mediastinum"]]
+        mask_bone_2, mask_lung_2, mask_heart_2, mask_mediastinum_2 = [load_pickle("{}/data/IU_xray_segmentation/{}/1_mask/{}_concat.pkl".format(self.mask_path, image_id, each)) for each in ["bone", "lung", "heart", "mediastinum"]]
         if self.transform is not None:
             image_1, mask_bone_1, mask_lung_1, mask_heart_1, mask_mediastinum_1 = \
                         self.transform(image_1, mask_bone_1, mask_lung_1, mask_heart_1, mask_mediastinum_1)

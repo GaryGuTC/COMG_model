@@ -41,6 +41,8 @@ https://github.com/zhjohnchan/R2GenCMN/tree/main/pycocoevalcap
 |   |-- compute_ce.py
 |   |-- ...........
 ```
+Tips:
+1.  Please make sure all files exist (if not, please create them by yourself) to avoid some mistakes happening.
 ## Datasets
 
 We use two datasets (IU X-Ray and MIMIC-CXR) in our paper
