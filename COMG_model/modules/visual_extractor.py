@@ -93,14 +93,10 @@ class VisualExtractor(nn.Module):
         super(VisualExtractor, self).__init__()
         self.visual_extractor = args.visual_extractor
         self.pretrained = args.visual_extractor_pretrained
-        # model = getattr(models, self.visual_extractor)(pretrained=self.pretrained)
-        # modules = list(model.children())[:-2]
-        # self.model = nn.Sequential(*modules)
+
         self.model = Reconstructed_resnet101(self.pretrained)
         self.avg_fnt = torch.nn.AvgPool2d(kernel_size=7, stride=1, padding=0)
-        ###########################################################
-        ############### Experiment 1 (extral part-mask_CMN)########
-        ###########################################################
+
         self.cross_attn = MultiHeadedAttention(args.num_heads, args.d_model)
         self.self_attn = MultiHeadedAttention(args.num_heads, args.d_model)
         self.Lnorm1 = LayerNorm(512)
@@ -154,9 +150,7 @@ class VisualExtractor(nn.Module):
         batch_size, feat_size, _, _ = patch_feats.shape
         patch_feats = patch_feats.reshape(batch_size, feat_size, -1).permute(0, 2, 1) # 16,49,2048
         saved_disease_token = []
-        ###########################################################
-        ###################### Experiment 1 (extral part) #########
-        ###########################################################
+
         mask_feature = []
         tmp_feature = tmp_feature.reshape(image_mask_bone.shape[0], 1, image_mask_bone.shape[2], image_mask_bone.shape[3])
         disease_token_feature = []
@@ -185,9 +179,6 @@ class VisualExtractor(nn.Module):
         batch_size, feat_size, _, _ = patch_feats.shape
         patch_feats = patch_feats.reshape(batch_size, feat_size, -1).permute(0, 2, 1) # 16,49,2048
         
-        ###########################################################
-        ###################### Experiment 1 (extral part) #########
-        ###########################################################
         mask_feature = []
         tmp_feature = tmp_feature.reshape(image_mask_bone.shape[0], 1, image_mask_bone.shape[2], image_mask_bone.shape[3])
         disease_token_feature = []
