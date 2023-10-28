@@ -1,9 +1,10 @@
-# COMG Model: Complex Organism Mask Guided Radiology Report Generation Model
+# COMG Model: Complex Organism Mask Guided Radiology Report Generation Model - WACV 2024
 
-This is the implementation of COMG Model: Complex Organism Mask Guided Radiology Report Generation Model
+This is the implementation of COMG Model: Complex Organism Mask Guided Radiology Report Generation Model.
 
 ## Abstract
-The goal of automatic report generation is to generate a clinically accurate and coherent phrase from a single given X-ray image, which could alleviate the workload of traditional radiology reporting. However, in a real world scenario, radiologists frequently face the challenge of producing extensive reports derived from numerous medical images, thereby medical report generation from multi-image perspective is needed. In this paper, we propose the Complex Organ Mask Guided (termed as COMG) report generation model, which incorporates masks from multiple organs (e.g., bones, lungs, heart, and mediastinum), to provide more detailed information and guide the model’s attention to these crucial body regions. Specifically, we leverage prior knowledge of the disease corresponding to each organ in the fusion process to enhance the disease identification phase during the report generation process. Additionally, cosine similarity loss is introduced as target function to ensure the convergence of cross-modal consistency and facilitate model optimization. Experimental results on two public datasets show that COMG achieves a 11.4% and 9.7% improvement in terms of BLEU4 scores over the SOTA model KiUT on IU-Xray and MIMIC, respectively.
+![contents](./imgs/structure.png)
+
 
 ## Requirements
 
@@ -12,30 +13,70 @@ conda env create -f environment.yaml # method 1
 pip install -r requirements.txt # method 2
 ```
 
-### pycocoevalcap
+#### pycocoevalcap
 ```bash
 Download evaluation metrics
-https://github.com/tylin/coco-caption/tree/master/pycocoevalcap
+https://github.com/zhjohnchan/R2GenCMN/tree/main/pycocoevalcap
+```
+``` bash
+|-- COMG_model
+|   |-- data
+|   |-- pycocoevalcap
+|   |-- .......
 ```
 ## Datasets
 
-We use two datasets(IU X-Ray and MIMIC-CXR) in our paper
+We use two datasets (IU X-Ray and MIMIC-CXR) in our paper
 
 For `IU X-Ray`, you can download the dataset from [here](https://openi.nlm.nih.gov/faq) and then put the files in `data`.
 
 For `MIMIC-CXR`, you can download the dataset from [here](https://physionet.org/content/mimic-cxr/2.0.0/) and then put the files in `data`.
 
+Put data into the data file
+```bash
+|-- data
+|   |-- IU_xray
+|       |-- images
+|       |   |-- .......
+|       |-- annotation.json
+|       |-- annotation_disease.json
+|   |-- mimic_cxr
+|       |-- images
+|           |-- .......
+|       |-- annotation.json
+|       |-- annotation_disease.json
+```
 ### Generate Mask
 
 Generate Mask by using [Chest X-Ray Anatomy Segmentation model](https://github.com/ConstantinSeibold/ChestXRayAnatomySegmentation/)
 
 ```bash
-cd COMG_model
-cd preprocess_mask
-bash generate_mask.sh # almost 30 min(IU-xray) + 4h(mimic_cxr)
+cd COMG_model/preprocess_mask
+bash generate_mask.sh
 ```
 
-## Train & test - The first stage
+```bash
+|-- data
+|   |-- IU_xray
+|       |-- images
+|       |-- annotation.json
+|       |-- annotation_disease.json
+|   |-- IU_xray_segmentation (generated)
+|       |-- CXR1_1_IM-00001
+|       |-- mask files .......
+|   |-- mimic_cxr
+|       |-- images
+|       |-- annotation.json
+|       |-- annotation_disease.json
+|   |-- mimic_cxr_segmentation (generated)
+|       |-- images
+|           |-- mask files ......
+```
+Tips:
+1. `iu-xray` mask: almost **147 G** and **30 min**
+2. `mimic-cxr` mask: almost **179 G** and **5 h**
+
+## Train & test - The First stage
 
 ```bash
 # IU xray
@@ -49,8 +90,7 @@ bash test_mimic_cxr.sh
 bash plot_mimic_cxr.sh
 ```
 
-## Train & test - RL - The second stage
-
+## Train & test - RL - The Second stage
 ```bash
 # IU-xray
 # train
@@ -67,9 +107,18 @@ bash scripts/mimic_cxr/run_rl.sh
 cd ../COMG_model
 bash test_mimic_cxr.sh
 ```
+Tips: 
+1. Please copy the pycocoevalcap and preprocess_mask files into the COMG_model_RL file.
+2. Please copy the result from COMG_RL to the COMG file for testing results.
+3. This file is the second stage training which means it needs to training based on the first stage model weight.
+
 
 ## Checkpoints Download
-future update
+You can download the models we trained for each dataset from [here](https://unisydneyedu-my.sharepoint.com/:f:/g/personal/tigu8498_uni_sydney_edu_au/El3yDm4XPdhDkRlmm8g9rCQBrqVtTPOs1ABMtzNqtnMhJw?e=kaKc6I)
+
+## Result
+![contents](./imgs/COMG_result.jpg)
+
 
 ## Acknowledgement
 
