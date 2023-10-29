@@ -3,7 +3,7 @@
 This is the implementation of COMG Model: Complex Organism Mask Guided Radiology Report Generation Model.
 
 ## Abstract
-![contents](./imgs/structure.png)
+![contents](./imgs/structure.pdf)
 
 
 ## Requirements
