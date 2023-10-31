@@ -1,4 +1,4 @@
-# COMG Model: Complex Organism Mask Guided Radiology Report Generation Model - WACV 2024
+# [WACV 2024] COMG Model: Complex Organism Mask Guided Radiology Report Generation Model
 
 This is the implementation of COMG Model: Complex Organism Mask Guided Radiology Report Generation Model.
 
