@@ -143,7 +143,7 @@ You can download the models we trained for each dataset from [here](https://unis
 If you find this project useful in your research, please cite the following papers:
 ```bibtex
 @inproceedings{COMG_2024_WACV,
-    title={COMG Model: Complex Organism Mask Guided Radiology Report Generation Model},
+    title={Complex Organ Mask Guided Radiology Report Generation},
     author={Gu, Tiancheng and Liu, Dongnan and Li, Zhiyuan and Cai, Weidong},
     booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
     year={2024}
