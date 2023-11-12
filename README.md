@@ -132,8 +132,8 @@ Tips:
 3. This file is the second stage training which means it needs to training based on the first stage model weight.
 
 
-## Checkpoints Download
-You can download the models we trained for each dataset from [here](https://unisydneyedu-my.sharepoint.com/:f:/g/personal/tigu8498_uni_sydney_edu_au/El3yDm4XPdhDkRlmm8g9rCQBrqVtTPOs1ABMtzNqtnMhJw?e=kaKc6I)
+## JSON files and Checkpoints Download
+You can download the JSON files needed and the models we trained for each dataset from [here](https://unisydneyedu-my.sharepoint.com/:f:/g/personal/tigu8498_uni_sydney_edu_au/El3yDm4XPdhDkRlmm8g9rCQBrqVtTPOs1ABMtzNqtnMhJw?e=kaKc6I)
 
 ## Result
 ![contents](./imgs/COMG_result.jpg)
