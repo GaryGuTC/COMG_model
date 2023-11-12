@@ -1,6 +1,6 @@
 # [WACV 2024] Complex Organ Mask Guided Radiology Report Generation
 
-This is the implementation of Complex Organ Mask Guided Radiology Report Generation.
+This is the implementation of [Complex Organ Mask Guided Radiology Report Generation](https://arxiv.org/abs/2311.02329).
 
 ## Abstract
 ![contents](./imgs/structure.jpg)
