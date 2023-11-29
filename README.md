@@ -146,7 +146,7 @@ If you find this project useful in your research, please cite the following pape
 ```bibtex
 @inproceedings{COMG_2024_WACV,
     title={Complex Organ Mask Guided Radiology Report Generation},
-    author={Tiancheng, Gu and Dongnan, Liu and Zhiyuan, Li and Weidong, Cai},
+    author={Tiancheng Gu and Dongnan Liu and Zhiyuan Li and Weidong Cai},
     booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
     year={2024}
 }
