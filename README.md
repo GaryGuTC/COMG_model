@@ -1,7 +1,8 @@
 # [WACV 2024] Complex Organ Mask Guided Radiology Report Generation
 
-This is the implementation of [Complex Organ Mask Guided Radiology Report Generation](https://arxiv.org/abs/2311.02329).
+This is the implementation of [Complex Organ Mask Guided Radiology Report Generation](https://openaccess.thecvf.com/content/WACV2024/html/Gu_Complex_Organ_Mask_Guided_Radiology_Report_Generation_WACV_2024_paper.html).
 
+[[Poster](https://ieeecs-media.computer.org/media/conferences/wacv/wacv24-posters/Complex%20Organ%20Mask%20Guided%20Radiology%20Report%20Generation.pdf)], [[Video](https://video.computer.org/Wacv-Posters24/3U4WG6Jzko77rZKnRAmCVx-wacv24-2526.mp4)]
 ## Abstract
 ![contents](./imgs/structure.jpg)
 
@@ -144,11 +145,13 @@ You can download the JSON files needed and the models we trained for each datase
 ## Citation
 If you find this project useful in your research, please cite the following papers:
 ```bibtex
-@inproceedings{COMG_2024_WACV,
-    title={Complex Organ Mask Guided Radiology Report Generation},
-    author={Tiancheng Gu and Dongnan Liu and Zhiyuan Li and Weidong Cai},
-    booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-    year={2024}
+@InProceedings{Gu_2024_WACV,
+    author    = {Gu, Tiancheng and Liu, Dongnan and Li, Zhiyuan and Cai, Weidong},
+    title     = {Complex Organ Mask Guided Radiology Report Generation},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2024},
+    pages     = {7995-8004}
 }
 ```
 
