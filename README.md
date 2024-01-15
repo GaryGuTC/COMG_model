@@ -134,7 +134,7 @@ Tips:
 Please follow [R2GenCMN](https://github.com/zhjohnchan/R2GenCMN/tree/main)'s work and his [code](https://github.com/zhjohnchan/R2GenCMN/blob/main/compute_ce.py).
 
 ## JSON files and Checkpoints Download
-You can download the JSON files needed and the models we trained for each dataset from [here](https://unisydneyedu-my.sharepoint.com/:f:/g/personal/tigu8498_uni_sydney_edu_au/El3yDm4XPdhDkRlmm8g9rCQBrqVtTPOs1ABMtzNqtnMhJw?e=kaKc6I)
+You can download the JSON files needed and the models we trained for each dataset from [here](https://unisydneyedu-my.sharepoint.com/:f:/g/personal/tigu8498_uni_sydney_edu_au/El3yDm4XPdhDkRlmm8g9rCQBlgbRl3Z-HQ5HJzLnHINWvw?e=PCYOfU)
 
 ## Result
 ![contents](./imgs/COMG_result.jpg)
