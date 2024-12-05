@@ -4,7 +4,6 @@ This is the implementation of Complex Organ Mask Guided Radiology Report Generat
 ## Abstract
 ![contents](./imgs/structure.jpg)
 
-
 ## Requirements
 
 ```bash
@@ -150,6 +149,13 @@ If you find this project useful in your research, please cite the following pape
     month     = {January},
     year      = {2024},
     pages     = {7995-8004}
+}
+
+@InProceedings{Gu_2025_WACV,
+    author    = {Gu, Tiancheng and Yang, Kaicheng and An, Xiang and Feng, Ziyong and Liu, Dongnan and Cai, Weidong},
+    title     = {ORID: Organ-Regional Information Driven Framework for Radiology Report Generation},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    year      = {2025},
 }
 ```
 
