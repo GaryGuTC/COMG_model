@@ -1,6 +1,6 @@
 # [WACV 2024] Complex Organ Mask Guided Radiology Report Generation
-
 This is the implementation of Complex Organ Mask Guided Radiology Report Generation. [[Paper](https://openaccess.thecvf.com/content/WACV2024/html/Gu_Complex_Organ_Mask_Guided_Radiology_Report_Generation_WACV_2024_paper.html)] [[Poster](https://ieeecs-media.computer.org/media/conferences/wacv/wacv24-posters/Complex%20Organ%20Mask%20Guided%20Radiology%20Report%20Generation.pdf)] [[Video](https://video.computer.org/Wacv-Posters24/3U4WG6Jzko77rZKnRAmCVx-wacv24-2526.mp4)]
+
 ## Abstract
 ![contents](./imgs/structure.jpg)
 
@@ -150,7 +150,8 @@ If you find this project useful in your research, please cite the following pape
     year      = {2024},
     pages     = {7995-8004}
 }
-
+```
+```bibtex
 @InProceedings{Gu_2025_WACV,
     author    = {Gu, Tiancheng and Yang, Kaicheng and An, Xiang and Feng, Ziyong and Liu, Dongnan and Cai, Weidong},
     title     = {ORID: Organ-Regional Information Driven Framework for Radiology Report Generation},
@@ -158,7 +159,6 @@ If you find this project useful in your research, please cite the following pape
     year      = {2025},
 }
 ```
-
 
 ## Acknowledgement
 
