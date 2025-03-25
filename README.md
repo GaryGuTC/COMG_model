@@ -1,5 +1,9 @@
 # [WACV 2024] Complex Organ Mask Guided Radiology Report Generation
-This is the implementation of Complex Organ Mask Guided Radiology Report Generation. [[Paper](https://openaccess.thecvf.com/content/WACV2024/html/Gu_Complex_Organ_Mask_Guided_Radiology_Report_Generation_WACV_2024_paper.html)] [[Poster](https://ieeecs-media.computer.org/media/conferences/wacv/wacv24-posters/Complex%20Organ%20Mask%20Guided%20Radiology%20Report%20Generation.pdf)] [[Video](https://video.computer.org/Wacv-Posters24/3U4WG6Jzko77rZKnRAmCVx-wacv24-2526.mp4)]
+This is the implementation of COMG: Complex Organ Mask Guided Radiology Report Generation. [[Paper](https://openaccess.thecvf.com/content/WACV2024/html/Gu_Complex_Organ_Mask_Guided_Radiology_Report_Generation_WACV_2024_paper.html)] [[Poster](https://ieeecs-media.computer.org/media/conferences/wacv/wacv24-posters/Complex%20Organ%20Mask%20Guided%20Radiology%20Report%20Generation.pdf)] [[Video](https://video.computer.org/Wacv-Posters24/3U4WG6Jzko77rZKnRAmCVx-wacv24-2526.mp4)]
+
+This is the baseline of ORID: Organ-Regional Information Driven Framework for Radiology Report Generation. [[Paper](https://openaccess.thecvf.com/content/WACV2025/papers/Gu_ORID_Organ-Regional_Information_Driven_Framework_for_Radiology_Report_Generation_WACV_2025_paper.pdf)] [[Poster]()] [[Video]()]
+
+**If you are interested in these works or have questions, please email me or ask in the GitHub issues; I will respond as soon as possible.**
 
 ## Abstract
 ![contents](./imgs/structure.jpg)
